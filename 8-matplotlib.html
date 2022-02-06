@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Matplotlib | 可视化文档编写</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content=" 可视化文档编写----各种图表表现语法测试">
+    
+    <link rel="preload" href="/visualization-document/assets/css/0.styles.d0397f8b.css" as="style"><link rel="preload" href="/visualization-document/assets/js/app.2ca1bc77.js" as="script"><link rel="preload" href="/visualization-document/assets/js/2.5a1cdc71.js" as="script"><link rel="preload" href="/visualization-document/assets/js/20.03c53d49.js" as="script"><link rel="prefetch" href="/visualization-document/assets/js/10.b525c989.js"><link rel="prefetch" href="/visualization-document/assets/js/11.2f4cbd0c.js"><link rel="prefetch" href="/visualization-document/assets/js/12.d51178be.js"><link rel="prefetch" href="/visualization-document/assets/js/13.60922785.js"><link rel="prefetch" href="/visualization-document/assets/js/14.2c4b35ac.js"><link rel="prefetch" href="/visualization-document/assets/js/15.30ba3934.js"><link rel="prefetch" href="/visualization-document/assets/js/16.2b8480fd.js"><link rel="prefetch" href="/visualization-document/assets/js/17.528ce6fa.js"><link rel="prefetch" href="/visualization-document/assets/js/18.0f7cf65e.js"><link rel="prefetch" href="/visualization-document/assets/js/19.a4c6149b.js"><link rel="prefetch" href="/visualization-document/assets/js/21.2f9374f7.js"><link rel="prefetch" href="/visualization-document/assets/js/22.62484960.js"><link rel="prefetch" href="/visualization-document/assets/js/23.f5bf38c3.js"><link rel="prefetch" href="/visualization-document/assets/js/3.e4f42b1d.js"><link rel="prefetch" href="/visualization-document/assets/js/4.6d3190f2.js"><link rel="prefetch" href="/visualization-document/assets/js/5.9364d57d.js"><link rel="prefetch" href="/visualization-document/assets/js/6.017f7cd4.js"><link rel="prefetch" href="/visualization-document/assets/js/7.b087af14.js"><link rel="prefetch" href="/visualization-document/assets/js/8.2d6cc2e6.js"><link rel="prefetch" href="/visualization-document/assets/js/9.f9dc3695.js">
+    <link rel="stylesheet" href="/visualization-document/assets/css/0.styles.d0397f8b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/visualization-document/" class="home-link router-link-active"><!----> <span class="site-name">可视化文档编写</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/visualization-document/" aria-current="page" class="sidebar-link">书写规范</a></li><li><a href="/visualization-document/1-flow.html" class="sidebar-link">流程图</a></li><li><a href="/visualization-document/11-标题和段落.html" class="sidebar-link">标题和段落</a></li><li><a href="/visualization-document/12-列表和表格.html" class="sidebar-link">列表和表格</a></li><li><a href="/visualization-document/13-代码.html" class="sidebar-link">代码</a></li><li><a href="/visualization-document/14-图片.html" class="sidebar-link">图片</a></li><li><a href="/visualization-document/19-实体关系图.html" class="sidebar-link">实体关系图</a></li><li><a href="/visualization-document/2-sequence.html" class="sidebar-link">顺序图</a></li><li><a href="/visualization-document/20-甘特图.html" class="sidebar-link">甘特图</a></li><li><a href="/visualization-document/3-class.html" class="sidebar-link">类图</a></li><li><a href="/visualization-document/4-state.html" class="sidebar-link">状态图</a></li><li><a href="/visualization-document/5-symbol.html" class="sidebar-link">数学符号</a></li><li><a href="/visualization-document/6-formula.html" class="sidebar-link">数学公式</a></li><li><a href="/visualization-document/7-extend.html" class="sidebar-link">扩展语法</a></li><li><a href="/visualization-document/8-matplotlib.html" aria-current="page" class="active sidebar-link">Matplotlib</a></li><li><a href="/visualization-document/9-chartjs.html" class="sidebar-link">Chartjs</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="matplotlib"><a href="#matplotlib" class="header-anchor">#</a> Matplotlib</h1> <p>.. plot::</p> <p>import matplotlib.pyplot as plt
+import numpy as np
+x = np.random.randn(1000)
+plt.hist( x, 20)
+plt.grid()
+plt.title(r'Normal: <span class="vuepress-eq"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">\mu=%.2f, \sigma=%.2f</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span></span>'%(x.mean(), x.std()))
+plt.show()</p> <p>&quot;&quot;&quot;</p> <p>这是我的公开日记</p> <p>.. math::</p> <p>\int_{-\infty}^{\infty}\frac{e^{i\phi}}{1+x^2\frac{e^{i\phi}}{1+x^2}}</p> <p>.. chart:: 0-diagrams/test.json</p> <div class="language- extra-class"><pre><code>This is the caption of the chart
+</code></pre></div><p>.. plot::</p> <p>import matplotlib.pyplot as plt
+import numpy as np
+x = np.random.randn(1000)
+plt.hist( x, 20)
+plt.grid()
+plt.title(r'Normal: <span class="vuepress-eq"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">\mu=%.2f, \sigma=%.2f</annotation></semantics></math></span><span aria-hidden="true" class="katex-html"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">μ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span></span>'%(x.mean(), x.std()))
+plt.show()</p> <p>plot</p> <p>.. plot::</p> <p>import matplotlib.pyplot as plt
+import numpy as np</p> <p>x = np.linspace(-6, 6, 1000)
+y = np.sin(x)
+plt.plot(x, y)
+plt.title(&quot;sin(x)&quot;)</p> <h1 id="最后必须要调用-show-方法-才能显示"><a href="#最后必须要调用-show-方法-才能显示" class="header-anchor">#</a> 最后必须要调用 show 方法, 才能显示</h1> <p>plt.show()</p> <p>对对对</p> <p>.. chart::</p> <p>dog: 100
+cat: 80
+rabbit: 40</p> <p>{% chart %}
+{
+&quot;data&quot;: {
+&quot;type&quot;: &quot;bar&quot;,
+&quot;columns&quot;: [
+[&quot;data1&quot;, 30, 200, 100, 400, 150, 250],
+[&quot;data2&quot;, 50, 20, 10, 40, 15, 25]
+],
+&quot;axes&quot;: {
+&quot;data2&quot;: &quot;y2&quot;
+}
+},
+&quot;axis&quot;: {
+&quot;y2&quot;: {
+&quot;show&quot;: true
+}
+}
+}
+{% endchart %}</p> <p>ddddddd</p> <p>{% chart %}
+{
+&quot;xAxis&quot;: {
+&quot;type&quot;: &quot;category&quot;,
+&quot;data&quot;: [&quot;Mon&quot;, &quot;Tue&quot;, &quot;Wed&quot;, &quot;Thu&quot;, &quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;]
+},
+&quot;tooltip&quot;: &quot;{}&quot;,
+&quot;yAxis&quot;: {
+&quot;type&quot;: &quot;value&quot;
+},
+&quot;series&quot;: [{
+&quot;data&quot;: [820, 932, 901, 934, 1290, 1330, 1320],
+&quot;type&quot;: &quot;line&quot;
+}]
+}
+{% endchart %}</p> <p>sssssss</p> <p>{% chart %}
+{
+&quot;data&quot;: {
+&quot;type&quot;: &quot;bar&quot;,
+&quot;columns&quot;: [
+[&quot;data1&quot;, 30, 200, 100, 400, 150, 250],
+[&quot;data2&quot;, 50, 20, 10, 40, 15, 25]
+],
+&quot;axes&quot;: {
+&quot;data2&quot;: &quot;y2&quot;
+}
+},
+&quot;axis&quot;: {
+&quot;y2&quot;: {
+&quot;show&quot;: true
+}
+}
+}
+{% endchart %}</p> <p>{% graph %}
+{
+&quot;title&quot;: &quot;1/x * cos(1/x)&quot;,
+&quot;grid&quot;: true,
+&quot;xAxis&quot;: {
+&quot;domain&quot;: [0.01, 1]
+},
+&quot;yAxis&quot;: {
+&quot;domain&quot;: [-100, 100]
+},
+&quot;data&quot;: [{
+&quot;fn&quot;: &quot;1/x * cos(1/x)&quot;,
+&quot;closed&quot;: true
+}]
+}
+{% endgraph %}</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/visualization-document/7-extend.html" class="prev">
+        扩展语法
+      </a></span> <span class="next"><a href="/visualization-document/9-chartjs.html">
+        Chartjs
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/visualization-document/assets/js/app.2ca1bc77.js" defer></script><script src="/visualization-document/assets/js/2.5a1cdc71.js" defer></script><script src="/visualization-document/assets/js/20.03c53d49.js" defer></script>
+  </body>
+</html>
